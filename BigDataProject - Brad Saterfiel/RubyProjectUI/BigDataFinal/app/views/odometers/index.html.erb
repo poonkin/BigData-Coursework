@@ -1,0 +1,136 @@
+
+<script>
+    $(document).ready(function () {
+        setInterval(refreshRidesPartial, 1000),
+        setInterval(refreshMPHPartial, 1000),
+        setInterval(refreshAgePartial, 2000)
+    });
+
+    function refreshRidesPartial() {
+        $.ajax({
+            url: "odometers/show_ride"
+        })
+    }
+
+    function refreshMPHPartial() {
+        $.ajax({
+            url: "odometers/show_mph"
+        })
+    }
+
+    function refreshAgePartial() {
+        $.ajax({
+            url: "odometers/show_age"
+        })
+    }
+
+</script>
+
+<div class="row" style="min-height: 105px; text-align: center; width: 70%; margin: auto; margin-top: 20px; font-size: 65px; border: 1px solid black; border-radius: 5px; background-color: white;">
+    CitiBike Realtime Rider Data
+    <div class="row" style="font-size: 15px; text-align: center; margin-bottom: 5px;">
+        <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> Brad Saterfiel - Fall 2014 UChicago MPCS 53013 - Big Data - Demo Purposes Only
+    </div>
+</div>
+
+<div class="row" style="min-height: 125px; text-align: center; width: 70%; margin: auto; margin-top: 20px;border: 1px solid black; border-radius: 5px; background-color: white;">
+    <div class="row" style="font-size: 30px;">
+        Current Average Riding Speed in MPH By Gender and Age
+    </div>
+    <div class="row" style="font-size: 15px;">
+        Speed Layer - Kafka, Thrift, Spark, Cassandra, Ruby, Ajax - No Batch to Demonstrate Realtime Avg Updates
+    </div>
+    <div class="col-md-2" style="margin-top: 20px; margin-left: -20px; margin-right: -25px;">
+        <div class = "row">
+            <%= image_tag("bike.png", height: 75, width: 'auto') %>
+        </div>
+        <div class="row" style="font-size: 20px; margin-top: 29px;">
+            Total Obs
+        </div>
+    </div>
+    <div class="col-md-10" style="font-size: 20px;">
+        <table class = "table table-hover">
+            <thead>
+                <tr>
+                    <th>Men <br/> < 25</th>
+                    <th>Women <br/> < 25</th>
+                    <th>Men <br/>25 - 55</th>
+                    <th>Women <br/>25 - 55</th>
+                    <th>Men <br/>> 55</th>
+                    <th>Women <br/>> 55</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id = "mph_avg">
+
+                </tr>
+                <tr id = "total_count">
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<div class="row" style="min-height: 125px; text-align: center; width: 70%; margin: auto; margin-top: 20px;border: 1px solid black; border-radius: 5px; background-color: white;">
+    <div class="row" style="font-size: 30px;">
+        Bike Age by Time Ridden
+    </div>
+    <div class="row" style="font-size: 15px;">
+        Speed + Batch Layers - Kafka, Thrift, Spark, Cassandra, Ruby, Ajax, Pig, Hadoop
+    </div>
+    <div class="col-md-2" style="margin-top: 5px; margin-left: -20px; margin-right: -25px;">
+        <%= image_tag("odometer.png", height: 75, width: 'auto') %>
+    </div>
+    <div class="col-md-10" style="font-size: 20px;">
+        <div>
+            <table class = "table table-hover">
+                <thead>
+                <tr>
+                    <th>Youngest Bike</th>
+                    <th>Average Fleet Age</th>
+                    <th>Oldest Bike</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr id = "bike_age">
+
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="row" style="min-height: 125px; text-align: center; width: 70%; margin: auto; margin-top: 20px;border: 1px solid black; border-radius: 5px; background-color: white;">
+    <div class="row" style="font-size: 30px;">
+        Latest Bike Data Log (Abbr.)
+    </div>
+    <div class="row" style="font-size: 15px;">
+        Speed Layer - Kafka, Thrift, Spark, Cassandra, Ruby, Ajax - Post Log from Kafka to Spark to Cassandra
+    </div>
+    <div class="col-md-2" style="margin-top: 5px; margin-left: -20px; margin-right: -25px;">
+        <%= image_tag("log.png", height: 75, width: 'auto') %>
+    </div>
+    <div class="col-md-10" style="font-size: 20px;">
+        <table class = "table table-hover">
+            <thead>
+            <tr>
+                <th>Gender</th>
+                <th>Birth Year</th>
+                <th>Start Station</th>
+                <th>End Station</th>
+                <th>Trip Length</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr id="ride_content">
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

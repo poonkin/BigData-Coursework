@@ -1,0 +1,13 @@
+$('#mph_avg').html("<th><%= number_with_precision(@mph[:young_men_avg], precision: 5) %></th>")
+        .append("<th><%= number_with_precision(@mph[:young_women_avg], precision: 5) %></th>")
+        .append("<th><%= number_with_precision(@mph[:mid_men_avg], precision: 5) %></th>")
+        .append("<th><%= number_with_precision(@mph[:mid_women_avg], precision: 5) %></th>")
+        .append("<th><%= number_with_precision(@mph[:old_men_avg], precision: 5) %></th>")
+        .append("<th><%= number_with_precision(@mph[:old_women_avg], precision: 5) %></th>");
+
+$('#total_count').html("<th><%= @counts[:yms] %></th>")
+        .append("<th><%= @counts[:yws] %></th>")
+        .append("<th><%= @counts[:mms] %></th>")
+        .append("<th><%= @counts[:mws] %></th>")
+        .append("<th><%= @counts[:oms] %></th>")
+        .append("<th><%= @counts[:ows] %></th>");

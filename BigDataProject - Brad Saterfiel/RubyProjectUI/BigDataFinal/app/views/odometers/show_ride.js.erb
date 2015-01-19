@@ -1,0 +1,5 @@
+$('#ride_content').html("<th><%= @ride[:gender] %></th>")
+        .append("<th><%= @ride[:birthday] %></th>")
+        .append("<th><%= @ride[:start_station] %></th>")
+        .append("<th><%= @ride[:end_station] %></th>")
+        .append("<th><%= @ride[:trip_length] %></th>");

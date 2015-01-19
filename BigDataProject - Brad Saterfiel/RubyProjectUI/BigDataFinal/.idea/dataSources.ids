@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails BigDataFinal: development" uuid="f8359965-3715-46c4-9532-cda68c1f2cfd">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails BigDataFinal: test" uuid="11baa4ee-5084-4a35-8ac8-231ba93765df">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails BigDataFinal: production" uuid="a1f97fc2-a16a-4338-9b98-35c851531f23">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

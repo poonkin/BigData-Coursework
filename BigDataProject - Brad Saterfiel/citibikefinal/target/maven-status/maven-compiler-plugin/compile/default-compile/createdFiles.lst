@@ -1,0 +1,10 @@
+edu/uchicago/mpcs53013/citibikefinal/KafkaStreamingBikes$2.class
+edu/uchicago/mpcs53013/citibikefinal/KafkaStreamingBikes$3.class
+edu/uchicago/mpcs53013/citibikefinal/CitiBikeData.class
+edu/uchicago/mpcs53013/citibikefinal/CitiBikeData$CitiBikeDataTupleScheme.class
+edu/uchicago/mpcs53013/citibikefinal/CitiBikeData$_Fields.class
+edu/uchicago/mpcs53013/citibikefinal/CitiBikeData$1.class
+edu/uchicago/mpcs53013/citibikefinal/CitiBikeData$CitiBikeDataStandardScheme.class
+edu/uchicago/mpcs53013/citibikefinal/KafkaStreamingBikes$1.class
+edu/uchicago/mpcs53013/citibikefinal/CitiBikeData$CitiBikeDataStandardSchemeFactory.class
+edu/uchicago/mpcs53013/citibikefinal/CitiBikeData$CitiBikeDataTupleSchemeFactory.class
